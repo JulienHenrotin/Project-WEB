@@ -28,14 +28,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             $(".dropdown dt a").click(function() {
                 $(".dropdown dd ul").toggle();
             });
-                        
+
             $(".dropdown dd ul li a").click(function() {
                 var text = $(this).html();
                 $(".dropdown dt a span").html(text);
                 $(".dropdown dd ul").hide();
                 $("#result").html("Selected value is: " + getSelectedValue("sample"));
             });
-                        
+
             function getSelectedValue(id) {
                 return $("#" + id).find("dt a span.value").html();
             }
@@ -70,11 +70,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    	<li><a href="experiance.html">Events</a></li>
 						    	<li><a href="experiance.html">Experiance</a></li>
 						    	<li><a href="shop.html">Company</a></li>
-								<li><a href="contact.html">Contact</a></li>								
+								<li><a href="contact.html">Contact</a></li>
 								<div class="clear"></div>
 							</ul>
 							<script type="text/javascript" src="js/responsive-nav.js"></script>
-				    </div>							
+				    </div>
 	    		    <div class="clear"></div>
 	    	    </div>
 	            <div class="header_right">
