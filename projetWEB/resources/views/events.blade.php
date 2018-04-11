@@ -50,3 +50,6 @@
 <body>
 
 <?php include ('menu.blade.html'); ?>
+
+
+<?php include ('footer.blade.html'); ?>
