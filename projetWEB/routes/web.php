@@ -65,7 +65,7 @@ Route::post('/inscription', function(){
 
 
 Route::get('/inscription', 'inscriptionControleur@formulaire');
-Route::post('/inscription', 'inscriptionControleur@traitement');
+//Route::post('/inscription', 'inscriptionControleur@traitement');
 
 Route::post('/connexion','connexionControleur@traitement');
 Route::get('/connexion','connexionControleur@formulaire');
