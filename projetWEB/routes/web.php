@@ -62,3 +62,6 @@ Route::post('/connexion','connexionControler@traitement');
 
 Route::get('/BAI', 'ideeController@zonetxt' );
 Route::post('/BAI','ideeController@validation');
+
+Route::get('/admin', 'adminController@formulaire');
+Route::post('/admin', 'adminController@reponse');
