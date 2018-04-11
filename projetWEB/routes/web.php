@@ -17,16 +17,16 @@ Route::get('/index', function () {
 });
 
 
-Route::get('/team', function() {
-    return view('team');
+Route::get('/event', function() {
+    return view('event');
 });
 
 Route::get('/shop', function() {
     return view('shop');
 });
 
-Route::get('/events', function() {
-    return view('events');
+Route::get('/ideabox', function() {
+    return view('ideabox');
 });
 
 
