@@ -13,7 +13,7 @@
 
 Route::get('/index', function () {
 
-    return view('welcome');
+    return view('index');
 });
 
 
