@@ -18,14 +18,16 @@ class connexionControler extends Controller
 
     public function traitement()
     {
-        request()->validate([
+         request()->validate([
             'email'=>['required','email' ],
             'password'=>['required'],
         ]);
-        auth()->attempt([
+
+        $resultat = auth()->attempt([
             'mail'=>request('mail'),
-            'MDP'=>request('password'),
+            'password'=>request('password'),
         ]);
-        return 'traitement de la connexion';
+        var_dump($resultat);
+        return 'ca marche';
     }
 }

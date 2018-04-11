@@ -57,8 +57,8 @@ Route::get('/bonjour/{nom}', function () {
 Route::get('/inscription', 'inscriptionControleur@formulaire');
 Route::post('/inscription', 'inscriptionControleur@traitement');
 
-Route::post('/connexion','connexionControleur@traitement');
-Route::get('/connexion','connexionControleur@formulaire');
+Route::get('/connexion','connexionControler@formulaire');
+Route::post('/connexion','connexionControler@traitement');
 
 Route::get('/BAI', 'ideeController@zonetxt' );
 Route::post('/BAI','ideeController@validation');
