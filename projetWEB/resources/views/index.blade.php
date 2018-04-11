@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Free Snow Bootstrap Website Template | Home :: w3layouts</title>
+    <title>BDE Exia Nancy - Website</title>
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="css/style.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -63,31 +63,45 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- start slider -->
     <div id="fwslider">
         <div class="slider_container">
+            <!-- Slide Boutique -->
             <div class="slide">
                 <!-- Slide image -->
-                <img src="images/slider1.jpg" class="img-responsive" alt=""/>
+                <img src="images/shop.jpg" class="img-responsive" alt=""/>
                 <!-- /Slide image -->
                 <!-- Texts container -->
                 <div class="slide_content">
                     <div class="slide_content_wrap">
                         <!-- Text title -->
-                        <h1 class="title">Run Over<br>Everything</h1>
+                        <h1 class="title">Une grande boutique<br></h1>
                         <!-- /Text title -->
-                        <div class="button"><a href="#">See Details</a></div>
+                        <div class="button"><a href="shop">J'achète !</a></div>
                     </div>
                 </div>
                 <!-- /Texts container -->
             </div>
             <!-- /Duplicate to create more slides -->
+            <!-- Slide Events -->
             <div class="slide">
-                <img src="images/slider2.jpg" class="img-responsive" alt=""/>
+                <img src="images/event.jpg" class="img-responsive" alt=""/>
                 <div class="slide_content">
                     <div class="slide_content_wrap">
-                        <h1 class="title">Run Over<br>Everything</h1>
-                        <div class="button"><a href="#">See Details</a></div>
+                        <h1 class="title">Des évents<br>fous</h1>
+                        <div class="button"><a href="event">Montre moi</a></div>
                     </div>
                 </div>
             </div>
+
+            <!-- Slide Boite à idée -->
+            <div class="slide">
+                <img src="images/idea.jpg" class="img-responsive" alt=""/>
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h1 class="title">Donne nous<br>Tes idées</h1>
+                        <div class="button"><a href="ideabox">J'y vais</a></div>
+                    </div>
+                </div>
+            </div>
+
             <!--/slide -->
         </div>
         <div class="timers"></div>
