@@ -63,3 +63,10 @@ Route::post('/inscription', function(){
     return "Nous avons reçu votre email qui est " . request('email') . "et votre mot de passe qui est " . request('password');
 });
 
+
+Route::get('/inscription', 'inscriptionControleur@formulaire');
+Route::post('/inscription', 'inscriptionControleur@traitement');
+
+Route::post('/connexion','connexionControleur@traitement');
+Route::get('/connexion','connexionControleur@formulaire');
+
