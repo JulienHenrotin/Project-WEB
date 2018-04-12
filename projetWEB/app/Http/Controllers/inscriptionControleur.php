@@ -8,7 +8,7 @@ class inscriptionControleur extends Controller
 {
     public function formulaire()
     {
-        return view('inscription');
+        return view('register');
     }
 
     public function traitement()
@@ -28,5 +28,6 @@ class inscriptionControleur extends Controller
         $utilisateurs->MDP = request('password');
         $utilisateurs->id_statut ='1';
         $utilisateurs->save();
+        return view('/index');
     }
 }

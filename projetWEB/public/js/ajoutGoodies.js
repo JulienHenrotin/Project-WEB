@@ -1,3 +1,6 @@
-var nom=document.getElementById(nom);
-console.log(nom);
-console.log("ca marche");
+var monForm=document.getElementById("ajout");
+
+document.getElementById('valider').onclick = function () {
+    var leprix=monForm.prix;
+    alert(leprix);
+}

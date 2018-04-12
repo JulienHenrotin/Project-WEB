@@ -48,25 +48,23 @@
 <div class="main">
     <div class="shop_top">
         <div class="container">
-            <form>
+            <form method="post">
+                {{ csrf_field() }}
                 <div class="register-top-grid">
                     <h3>INFORMATIONS PERSONNELLES</h3>
                     <div>
                         <span>Prénom<label>*</label></span>
-                        <input type="text">
+                        <input type="text" name="prenom" placeholder="Prénom">
                     </div>
                     <div>
                         <span>Nom<label>*</label></span>
-                        <input type="text">
+                        <input type="text" name="nom" placeholder="Nom">
                     </div>
                     <div>
                         <span>Adresse email<label>*</label></span>
-                        <input type="text">
+                        <input type="text" name="mail" placeholder="Mail">
                     </div>
                     <div class="clear"> </div>
-                    <a class="news-letter" href="#">
-                        <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>S'inscrire à la Newsletter</label>
-                    </a>
                     <div class="clear"> </div>
                 </div>
                 <div class="clear"> </div>
@@ -74,16 +72,16 @@
                     <h3>INFORMATION DE CONNEXION</h3>
                     <div>
                         <span>Mot de passe<label>*</label></span>
-                        <input type="text">
+                        <input type="password" name="password" placeholder="Mot de Passe">
                     </div>
                     <div>
                         <span>Confirmation du mot de passe<label>*</label></span>
-                        <input type="text">
+                        <input type="password" name="password_confirmation" placeholder="Confirmation Mot de Passe">
                     </div>
                     <div class="clear"> </div>
                 </div>
                 <div class="clear"> </div>
-                <input type="submit" value="Confirmer">
+                <input type="submit" value="Inscription">
             </form>
         </div>
     </div>

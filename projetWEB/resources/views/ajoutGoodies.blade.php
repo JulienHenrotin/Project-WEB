@@ -5,12 +5,10 @@
 <head>
     <meta charset="utf-8" />
     <title> Ajout goodiees </title>
-    <script type="text/javascript" src="C:\wamp64\www\projetWEB\Project-WEB\projetWEB\public\js\ajoutGoodies.js"></script>
-
 </head>
 
 <body>
-    <form method="post">
+    <form method="post" name="ajout">
     {{ csrf_field() }}
     <input type="text" name="nom" placeholder="Nom goodies" id="nom">
     <input type="text" name="prix" placeholder="prix">
@@ -21,8 +19,9 @@
         <option value="2"> 2 </option>
         <option value="3"> 3 </option>
     </select>
-    <input type="submit" value="Ajouter">
+    <input type="submit" value="Ajouter" id="valider">
 </form>
 
 </body>
+<script type="text/javascript" src="js/ajoutGoodies.js"></script>
 </html>
