@@ -158,15 +158,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="row content_bottom-text">
             <div class="col-md-7">
                 <h3>Le Bureau des étudiants<br>C'est quoi ?</h3>
-                <p class="m_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio.</p>
-                <p class="m_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio.</p>
+                <p class="m_1">Le bureau des étudiants est l'association ayant pour but d'animer la vie de l'école par l'intermédiaire de diverses activités et évènnements. Le BDE propose aussi une quantité de services assez importante tel qu'une épicerie ouverte tous les jours de 8h30 à 17h30, de la vente de goodies et vêtements à l'effigie de l'école.</p>
+                <p class="m_2">Le BDE recense de multiples Clubs, ceux-ci étant "spécialisés et diversifiés" dans différents domaines tel que la cuisine, les jeux vidéos, la réalité virtuelle, etc. Il contribuent fortement à la vie de l'école grâce aux animations que ceux-ci proposent. Cette participation des Clubs à la vie de l'école est récompensée par le BDE sous la forme de subvention afin de permettre aux Clubs actifs de se développer et continuer dans une optique d'évolution permanente.</p>
             </div>
         </div>
     </div>
 </div>
 <div class="features">
     <div class="container">
-        <h3 class="m_3">Features</h3>
+        <h3 class="m_3">Les évents</h3>
         <div class="close_but"><i class="close1"> </i></div>
         <div class="row">
             <div class="col-md-3 top_box">
