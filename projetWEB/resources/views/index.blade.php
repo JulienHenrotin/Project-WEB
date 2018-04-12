@@ -112,17 +112,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <div class="main">
     <div class="content-top">
-        <h2>snowboards</h2>
-        <p>hendrerit in vulputate velit esse molestie consequat, vel illum dolore</p>
+        <h2>Boutique</h2>
+        <p>Il y en a pour tout le monde, pour tous les goûts</p>
         <div class="close_but"><i class="close1"> </i></div>
         <ul id="flexiselDemo3">
-            <li><img src="images/board1.jpg" /></li>
-            <li><img src="images/board2.jpg" /></li>
-            <li><img src="images/board3.jpg" /></li>
-            <li><img src="images/board4.jpg" /></li>
-            <li><img src="images/board5.jpg" /></li>
+            <li><img src="images/goodie1.jpg" /></li>
+            <li><img src="images/goodie2.jpg" /></li>
+            <li><img src="images/goodie3.jpg" /></li>
+            <li><img src="images/goodie4.jpg" /></li>
+            <li><img src="images/goodie5.jpg" /></li>
         </ul>
-        <h3>SnowBoard Extreme Series</h3>
+        <h3>Goodies</h3>
         <script type="text/javascript">
             $(window).load(function() {
                 $("#flexiselDemo3").flexisel({
@@ -157,7 +157,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="container">
         <div class="row content_bottom-text">
             <div class="col-md-7">
-                <h3>The Mountains<br>Snowboarding</h3>
+                <h3>Le Bureau des étudiants<br>C'est quoi ?</h3>
                 <p class="m_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio.</p>
                 <p class="m_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio.</p>
             </div>
@@ -171,7 +171,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="row">
             <div class="col-md-3 top_box">
                 <div class="view view-ninth"><a href="single.html">
-                        <img src="images/pic1.jpg" class="img-responsive" alt=""/>
+                        <img src="images/nude-3235437.jpg" class="img-responsive" alt=""/>
                         <div class="mask mask-1"> </div>
                         <div class="mask mask-2"> </div>
                         <div class="content">
