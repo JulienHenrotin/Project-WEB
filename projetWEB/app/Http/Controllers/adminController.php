@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class adminController extends Controller
 {
@@ -13,6 +14,22 @@ class adminController extends Controller
 
     public function reponse()
     {
-        return ("c okauau");
+        if(Input::get('Evenements'))
+        {
+            echo "event";
+        }
+        if(Input::get('ajouterGoodies'))
+        {
+            //echo "ajouter Goodies";
+            header('Location : C:\wamp64\www\projetWEB\Project-WEB\projetWEB\resources\views\index.blade.php ');
+        }
+        if(Input::get('ajouterEvent'))
+        {
+            echo "ajouter event";
+        }
+        if(Input::get('BAI'))
+        {
+            echo "boite a idée de Nicolas";
+        }
     }
 }

@@ -8,7 +8,7 @@ use Illuminate\Auth\Authenticatable as BasicAuthenticable;
 
 class utilisateurs extends Model implements Authenticatable
 {
-    use BasicAuthenticatable;
+    use BasicAuthenticable;
 
     public function getAuthPassword()
     {
