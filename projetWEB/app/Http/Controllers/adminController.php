@@ -16,20 +16,19 @@ class adminController extends Controller
     {
         if(Input::get('Evenements'))
         {
-            echo "event";
+            return redirect('/eventAdmin');
         }
         if(Input::get('ajouterGoodies'))
         {
-            //echo "ajouter Goodies";
-            header('Location : C:\wamp64\www\projetWEB\Project-WEB\projetWEB\resources\views\index.blade.php ');
+            return redirect('/ajoutGoodies');
         }
         if(Input::get('ajouterEvent'))
         {
-            echo "ajouter event";
+            return redirect('/ajouterEvent');
         }
         if(Input::get('BAI'))
         {
-            echo "boite a idée de Nicolas";
+            return redirect('/BAI');
         }
     }
 }

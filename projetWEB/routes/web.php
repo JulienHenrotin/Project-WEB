@@ -52,8 +52,6 @@ Route::get('/bonjour/{nom}', function () {
     ]);
 });
 
-
-
 Route::get('/inscription', 'inscriptionControleur@formulaire');
 Route::post('/inscription', 'inscriptionControleur@traitement');
 
@@ -65,3 +63,8 @@ Route::post('/BAI','ideeController@validation');
 
 Route::get('/admin', 'adminController@formulaire');
 Route::post('/admin', 'adminController@reponse');
+
+Route::view('/index', 'index');
+
+Route::get('/ajoutGoodies','ajoutGoodies_controller@formulaire');
+Route::post('/ajoutGoodies','ajoutGoodies_controller@traitement');

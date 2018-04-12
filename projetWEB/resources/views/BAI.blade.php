@@ -3,14 +3,14 @@
 
 @section('contenu')
 
-<form method="post">
+    <form method="post">
 
-{{ csrf_field() }}
+        {{ csrf_field() }}
 
-<input type="text" name="textidee" placeholder= " Ton idée">
+        <input type="text" name="textidee" placeholder= " Ton idée">
 
-<input type="submit" value="Valider mon idée">
+        <input type="submit" value="Valider mon idée">
 
-</form>
+    </form>
 
 @endsection

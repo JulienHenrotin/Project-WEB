@@ -6,11 +6,6 @@ use Illuminate\Http\Request;
 
 class connexionControler extends Controller
 {
-    public function reponse()
-    {
-        return '<H1> vous etes connecté</H1> et vous êtes :♣¦♠/Y♥☺☻♥';
-    }
-
     public function formulaire()
     {
         return view ('connexion');
@@ -26,7 +21,15 @@ class connexionControler extends Controller
             'mail'=>request('mail'),
             'password'=>request('password'),
         ]);
-        var_dump($resultat);
-        return 'ca marche';
+        if ($resultat)
+        {
+            return redirect('/index');
+        }
+        else
+        {
+            return back()->withInput()->withErrors([
+                'email'=>'Vos identifiants'
+            ]);
+        }
     }
 }
