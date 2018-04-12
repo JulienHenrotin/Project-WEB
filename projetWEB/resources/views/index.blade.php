@@ -171,34 +171,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="row">
             <div class="col-md-3 top_box">
                 <div class="view view-ninth"><a href="single.html">
-                        <img src="images/nude-3235437.jpg" class="img-responsive" alt=""/>
+                        <img src="images/event1.jpg" class="img-responsive" alt=""/>
                         <div class="mask mask-1"> </div>
                         <div class="mask mask-2"> </div>
                         <div class="content">
-                            <h2>Hover Style #9</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing.</p>
+                            <h2>Intégration 2k17</h2>
+                            <p>Toute première après midi associative pour nous petits nouveaux.</p>
                         </div>
                     </a> </div
             </div>
-            <h4 class="m_4"><a href="#">nostrud exerci ullamcorper</a></h4>
-            <p class="m_5">claritatem insitam</p>
+            <h4 class="m_4"><a href="#">Des évènnements ludiques</a></h4>
+            <p class="m_5">Intégration et découverte de Nancy</p>
         </div>
         <div class="col-md-3 top_box">
             <div class="view view-ninth"><a href="single.html">
-                    <img src="images/pic2.jpg" class="img-responsive" alt=""/>
+                    <img src="images/event2.jpg" class="img-responsive" alt=""/>
                     <div class="mask mask-1"> </div>
                     <div class="mask mask-2"> </div>
                     <div class="content">
-                        <h2>Hover Style #9</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing.</p>
+                        <h2>AGH 2K18</h2>
+                        <p>Votre BDE se forme pour vous.</p>
                     </div>
                 </a> </div>
-            <h4 class="m_4"><a href="#">nostrud exerci ullamcorper</a></h4>
-            <p class="m_5">claritatem insitam</p>
+            <h4 class="m_4"><a href="#">Des évènnements formateurs</a></h4>
+            <p class="m_5">Participation à l'Assemblée Générale d'Hiver du BNEI à Clermont-Ferrand</p>
         </div>
         <div class="col-md-3 top_box">
             <div class="view view-ninth"><a href="single.html">
-                    <img src="images/pic3.jpg" class="img-responsive" alt=""/>
+                    <img src="images/event3.jpg" class="img-responsive" alt=""/>
                     <div class="mask mask-1"> </div>
                     <div class="mask mask-2"> </div>
                     <div class="content">
@@ -211,7 +211,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <div class="col-md-3 top_box1">
             <div class="view view-ninth"><a href="single.html">
-                    <img src="images/pic4.jpg" class="img-responsive" alt=""/>
+                    <img src="images/event4.jpg" class="img-responsive" alt=""/>
                     <div class="mask mask-1"> </div>
                     <div class="mask mask-2"> </div>
                     <div class="content">
