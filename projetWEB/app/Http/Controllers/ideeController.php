@@ -10,19 +10,37 @@ class ideeController extends Controller
     public function zonetxt()
     {
 
-        return view ('BAI');
+    return view ('ideabox');
 
     }
 
     public function validation()
     {
 
-        $idee = new \App\boite_a_idee();
-        $idee -> idee= request('textidee');
-        $idee -> save();
-        return'idée validée!';
+    $idee = new \App\boite_a_idee();
+
+    $idee -> idee= request('textidee');
+
+    $idee -> save();
+
+return "ton idée a ete validé";
 
     }
+
+    public function ideeprec()
+
+    {
+          $boite_a_idee = \App\boite_a_idee::all();
+            //dd(dump($boite_a_idee));
+
+          return view ('ideabox',[
+
+          'boite_a_idee' => $boite_a_idee,
+
+    ]);
+
+    }
+
 
 
 }
