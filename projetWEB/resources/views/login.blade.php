@@ -62,7 +62,8 @@
                 <div class="login-title">
                     <h4 class="title">Clients enregistrés</h4>
                     <div id="loginbox" class="loginbox">
-                        <form action="" method="post" name="login" id="login-form">
+                        <form  method="post" name="login" id="login-form">
+                            {{ csrf_field() }}
                             <fieldset class="input">
                                 <p id="login-form-username">
                                     <label for="modlgn_username">Email</label>

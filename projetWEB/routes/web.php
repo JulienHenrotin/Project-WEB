@@ -63,8 +63,8 @@ Route::get('/bonjour/{nom}', function () {
 Route::get('/register', 'inscriptionControleur@formulaire');
 Route::post('/register', 'inscriptionControleur@traitement');
 
-Route::get('/connexion','connexionControler@formulaire');
-Route::post('/connexion','connexionControler@traitement');
+Route::get('/login','connexionControler@formulaire');
+Route::post('/login','connexionControler@traitement');
 
 Route::get('/ideabox', 'ideeController@zonetxt' );
 Route::post('/ideabox','ideeController@validation');
@@ -80,3 +80,7 @@ Route::post('/admin', 'adminController@reponse');
 
 Route::get('/ajoutGoodies','ajoutGoodies_controller@formulaire');
 Route::post('/ajoutGoodies','ajoutGoodies_controller@traitement');
+
+Route::get('/inscription' , function (){
+    return view ('inscription');
+});
