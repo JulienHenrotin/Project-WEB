@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Free Snow Bootstrap Website Template | Home :: w3layouts</title>
+    <title>Boite à idée</title>
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="css/style.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -57,47 +57,40 @@
                         <div class="row">
                             <div class="col-md-5">
 
-                    <form method="post">
+                                <form method="post">
 
-                        <div class="to">
-                        {{ csrf_field() }}
+                                    <div class="to">
+                                    {{ csrf_field() }}
 
 
-                            <input type="text" name="textidee" placeholder= "Ton idée juste ici"></textarea>
-                            <input type="submit" value="Valider mon idée">
+                                        <input type="text" name="textidee" placeholder= "Ton idée juste ici"></textarea>
+                                        <input type="submit" value="Valider mon idée">
 
-                        </div>
-                    </form>
+                                    </div>
+                                </form>
                             </div>
+
                             <div class="col-md-5">
 
-                            <h1> Idees precedentes </h1>
+                                <h1> Idees precedentes </h1>
+
+                                <ul>
+                                  @foreach($boite_a_idee as $BAI )
+                                        <li>
+
+                                          {{$BAI -> idee}}
+                                          <input type="submit" name="votes" value="Voter pour l'idee">
+                                          {{$BAI -> vote}}
 
 
-                            <ul>
-                              @foreach($boite_a_idee as $BAI )
-                                <li>
 
-                                  {{$BAI -> idee}}
-                                  <input type="submit" name="votes" value="Voter pour l'idee">
-                                 {{$BAI -> vote}}
+                                        </li>
 
-                            <?php
+                                    @endforeach
+                                </ul>
 
-                                if ($BAI != " " )
-                               {
-                                echo"0";
-                               }
-                            ?>
-                            likes
-
-                              </li>
-
-                               @endforeach
-                        </ul>
-                    </form>
-                </div>
-            </div>
+                            </div>
+                        </div>
         </div>
     </div>
 </div>
