@@ -64,7 +64,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="row shop_box-top">
                 <div class="col-md-3 shop_box"><a href="single.html">
-                        <img src="images/pic5.jpg" class="img-responsive" alt=""/>
+                        <img src="images/goodie1.jpg" class="img-responsive" alt=""/>
                         <span class="new-box">
 						<span class="new-label">New</span>
 					</span>
@@ -84,7 +84,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </a></div>
                 <div class="col-md-3 shop_box"><a href="single.html">
-                        <img src="images/pic6.jpg" class="img-responsive" alt=""/>
+                        <img src="images/goodie2.jpg" class="img-responsive" alt=""/>
                         <span class="new-box">
 						<span class="new-label">New</span>
 					</span>
@@ -100,7 +100,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </a></div>
                 <div class="col-md-3 shop_box"><a href="single.html">
-                        <img src="images/pic7.jpg" class="img-responsive" alt=""/>
+                        <img src="images/goodie3.jpg" class="img-responsive" alt=""/>
                         <span class="new-box">
 						<span class="new-label">New</span>
 					</span>
@@ -120,7 +120,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </a></div>
                 <div class="col-md-3 shop_box"><a href="single.html">
-                        <img src="images/pic8.jpg" class="img-responsive" alt=""/>
+                        <img src="images/goodie4.jpg" class="img-responsive" alt=""/>
                         <span class="new-box">
 						<span class="new-label">New</span>
 					</span>
