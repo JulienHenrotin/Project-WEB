@@ -11,10 +11,8 @@ class ajoutGoodies_controller extends Controller
 {
     public function formulaire()
     {
-        $utilisateur = \App\utilisateurs::where('mail', 'julien.henrtin@viacesi.Fr')->get();
-        dd(dump($utilisateur));
-        echo $utilisateur['items.attributes.prenom'];
-        //return view ('ajoutGoodies');
+
+        return view ('ajoutGoodies');
     }
 
     public function traitement()
