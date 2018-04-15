@@ -32,11 +32,12 @@ class connexionControler extends Controller
         ]);*/
         $mailentre = request('mail');
         $MDPentre = request('password');
-        $MDPbase = DB::table('utilisateurs')->select('MDP',);
-        dd(var_dump($MDPbase));
+        $MDPbase = DB::table('utilisateurs')->whereRaw('mail = ?',$mailentre);
+
 
         if ($MDPentre == $MDPbase)
         {
+            dd(var_dump("ca marche") );
             $prenom =DB::select('SELECT prenom FROM utilisateurs WHERE mail=? ',[$mailentre]);
             $id_user = DB::select('SELECT prenom FROM utilisateurs WHERE mail=? ',[$mailentre]);
             $id_statut = DB::select('SELECT id_statut FROM utilisateurs WHERE mail=? ',[$mailentre]);
