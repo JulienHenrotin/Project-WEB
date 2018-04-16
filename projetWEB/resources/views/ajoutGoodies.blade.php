@@ -8,13 +8,13 @@
 </head>
 
 <body>
-    <form method="post" name="ajout">
+    <form method="post" name="ajout" onsubmit="return verifForm(this)">
     {{ csrf_field() }}
-    <input type="text" name="nom" placeholder="Nom goodies" id="nom">
+    <input type="text" name="nom" placeholder="Nom goodies" id="nom" onblur="verifnom(this)">
         <span id="aideNom"></span> </br>
-    <input type="text" name="prix" placeholder="prix" id="prix">
+    <input type="text" name="prix" placeholder="prix" id="prix" onblur="verifprix(this)">
         <span id="aideprix"> </span> </br>
-        <textarea name="description" id="description" rows="10" cols="50">
+        <textarea name="description" id="description" rows="10" cols="50" onblur="verifdescrip(this)">
                 Décrivez le goodies ICI
         </textarea>
         <span id="aidedescrip"></span> </br>
@@ -24,10 +24,10 @@
         <option value="2"> 2 </option>
         <option value="3"> 3 </option>
     </select>
-    <input type="submit" value="Ajouter" id="valider" onSubmit="return valider(error)">
+    <input type="submit" value="Ajouter" id="valider" >
 </form>
 
 </body>
-<script src="js/verif.js"></script>
+<!--<script src="js/verif.js"></script>-->
 <script  src="js/ajoutGoodies.js"></script>
 </html>

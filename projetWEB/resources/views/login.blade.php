@@ -40,6 +40,7 @@
             });
         });
     </script>
+    <script src="js/login.js"></script>
 </head>
 
 
@@ -62,16 +63,17 @@
                 <div class="login-title">
                     <h4 class="title">Clients enregistrés</h4>
                     <div id="loginbox" class="loginbox">
-                        <form  method="post" name="login" id="login-form">
+                        <form  method="post" name="login" id="login-form" onsubmit="return verifForm(this)">
                             {{ csrf_field() }}
                             <fieldset class="input">
                                 <p id="login-form-username">
                                     <label for="modlgn_username">Email</label>
-                                    <input id="modlgn_username" type="text" name="email" class="inputbox" size="18" autocomplete="off">
+                                    <input id="mail" type="text" name="mail" class="inputbox" size="18" autocomplete="off" onblur="verifMail(this)">
+                                    <span id="aideMail"> </span>
                                 </p>
                                 <p id="login-form-password">
                                     <label for="modlgn_passwd">Mot de passe</label>
-                                    <input id="modlgn_passwd" type="password" name="password" class="inputbox" size="18" autocomplete="off">
+                                    <input id="password" type="password" name="password" class="inputbox" size="18" autocomplete="off" onblur="verifMDP(this)">
                                 </p>
                                 <div class="remember">
                                     <p id="login-form-remember">

@@ -80,7 +80,9 @@ Route::get('/add-to-cart/{id_items}', [
 
 Route::get('/admin', 'adminController@formulaire');
 Route::post('/admin', 'adminController@reponse');
+Route::get('/eventAdminPasse', 'eventPasseAdminControler@affichage');
 
+//Route::post('/eventAdmin', 'eventAdminControler@affichage');
 //Route::view('/index', 'index');
 
 Route::get('/ajoutGoodies','ajoutGoodies_controller@formulaire');

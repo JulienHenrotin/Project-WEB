@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Database\Eloquent\Model;
 
 class adminController extends Controller
 {
@@ -14,9 +15,13 @@ class adminController extends Controller
 
     public function reponse()
     {
-        if(Input::get('Evenements'))
+        if(Input::get('evenementsPasse'))
         {
-            return redirect('/eventAdmin');
+            return redirect('eventAdminPasse');
+        }
+        if(Input::get('Evenementsfutures'))
+        {
+            return view('/eventAdminFuture');
         }
         if(Input::get('ajouterGoodies'))
         {

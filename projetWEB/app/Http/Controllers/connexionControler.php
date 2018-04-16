@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\utilisateurs;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -32,8 +33,9 @@ class connexionControler extends Controller
         ]);*/
         $mailentre = request('mail');
         $MDPentre = request('password');
-        $MDPbase = DB::table('utilisateurs')->select('MDP');
-        dd(var_dump($MDPbase));
+        //$MDPbase = DB::select("SELECT mdp FROM utilisateurs WHERE mail=$mailentre");
+        $MDPbase = utilisateurs::select('MDP')->where('mail', $mailentre)->get();
+
 
         if ($MDPentre == $MDPbase)
         {

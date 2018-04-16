@@ -38,8 +38,27 @@ function verifNombre(champ , error)
     }
 }
 //====================================
+// ===========FONCTION CHECK MAIL===========
+function verifMail(champ)
+{
+    var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+    if(!regex.test(champ.value))
+    {
+        console.log("verif mail fausse");
+        surligne(champ, true);
+        return false;
+    }
+    else
+    {
+        console.log("verif mail vrai");
+        surligne(champ, false);
+        return true;
+    }
+}
+
+//====================================
 //=============FONCTION BLOQUE ENVOI FORM======
-function valider(error) {
+/*function valider(error) {
     if (error){
         alert("erreur");
     return true;
@@ -48,4 +67,4 @@ function valider(error) {
         alert("formulaire envoyé");
         return false;
     }
-}
+}*/

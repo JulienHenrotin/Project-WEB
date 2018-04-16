@@ -9,9 +9,7 @@ class ideeController extends Controller
 {
     public function zonetxt()
     {
-
         return view ('ideabox');
-
     }
 
     public function validation()

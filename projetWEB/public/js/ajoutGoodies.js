@@ -1,38 +1,72 @@
 console.log("verif goodies lancé");
 //=========== ELEMENTS ====================
-var nom = document.getElementById("nom");
+/*var nom = document.getElementById("nom");
 var prix = document.getElementById("prix");
 var description = document.getElementById("description");
-var bouton = document.getElementById("valider");
-var error = false;
+var bouton = document.getElementById("valider");*/
 //===================================================
+function surligne(champ, erreur ) {
+    if (erreur)
+        champ.style.backgroundColor = "#fba";
+    else
+        champ.style.backgroundColor = "";
+}
 
-nom.addEventListener("focus", function () {
-    document.getElementById("aideNom").textContent = "entrer le nom du Goodies";
-})
+function verifprix(champ)
+{
+        var entree = parseInt(champ.value);
+        if(isNaN(entree))
+        {
+            surligne(champ, true);
+            return false;
+        }
+        else {
+            surligne(champ, false);
+            return true;
+        }
+}
 
-nom.addEventListener("blur", function (e) {
-    document.getElementById("aideNom").textContent = "";
-})
+function verifnom(champ)
+{
+    if(champ.value.length > 15)
+    {
+        surligne(champ, true);
+        return false;
+    }
+    else
+    {
+        surligne(champ, false);
+        return true;
+    }
+}
 
+function verifdescrip(champ)
+{
+    if(champ.value.length > 300)
+{
+        surligne(champ, true);
+        return false;
+    }
+    else
+    {
+        surligne(champ, false);
+        return true;
+    }
+}
 
-description.addEventListener("focus", function () {
-    document.getElementById("aidedescrip").textContent = "Décrivez le produit avec 300 caractères maximun";
-})
-
-description.addEventListener("blur", function (e) {
-    document.getElementById("aidedescrip").textContent = "";
-    veriflongeur(description , 300 , error);
-})
-
-prix.addEventListener("focus", function () {
-    document.getElementById("aideprix").textContent = "entrer un prix en euro sans le signe €";
-})
-
-prix.addEventListener("blur", function (e) {
-    document.getElementById("aideprix").textContent = "";
-    veriflongeur(prix, 5 , error);
-    verifNombre(prix, error);
-})
-
-valider(error);
+function verifForm(f)
+{
+    var nomok = verifnom(f.nom);
+    var prixok = verifprix(f.prix);
+    var descripok = verifdescrip(f.description);
+    if (nomok && prixok && descripok)
+    {
+        console.log("verif form ok");
+        return true;
+    }
+    else
+    {
+        console.log("verif form pas tres ok");
+        return false;
+    }
+}
