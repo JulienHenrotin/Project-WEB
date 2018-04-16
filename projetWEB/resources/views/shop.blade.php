@@ -59,84 +59,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <?php include ('menu.blade.html'); ?>
 
 
+
 <div class="main">
     <div class="shop_top">
         <div class="container">
             <div class="row shop_box-top">
-                <div class="col-md-3 shop_box"><a href="single.html">
-                        <img src="images/goodie1.jpg" class="img-responsive" alt=""/>
-                        <span class="new-box">
-						<span class="new-label">New</span>
-					</span>
-                        <span class="sale-box">
-						<span class="sale-label">Sale!</span>
-					</span>
-                        <div class="shop_desc">
-                            <h3><a href="#">aliquam volutp</a></h3>
-                            <p>Lorem ipsum consectetuer adipiscing </p>
-                            <span class="reducedfrom">$66.00</span>
-                            <span class="actual">$12.00</span><br>
-                            <ul class="buttons">
-                                <li class="cart"><a href="#">Add To Cart</a></li>
-                                <li class="shop_btn"><a href="#">Read More</a></li>
-                                <div class="clear"> </div>
-                            </ul>
-                        </div>
-                    </a></div>
-                <div class="col-md-3 shop_box"><a href="single.html">
-                        <img src="images/goodie2.jpg" class="img-responsive" alt=""/>
-                        <span class="new-box">
-						<span class="new-label">New</span>
-					</span>
-                        <div class="shop_desc">
-                            <h3><a href="#">aliquam volutp</a></h3>
-                            <p>Lorem ipsum consectetuer adipiscing </p>
-                            <span class="actual">$12.00</span><br>
-                            <ul class="buttons">
-                                <li class="cart"><a href="#">Add To Cart</a></li>
-                                <li class="shop_btn"><a href="#">Read More</a></li>
-                                <div class="clear"> </div>
-                            </ul>
-                        </div>
-                    </a></div>
-                <div class="col-md-3 shop_box"><a href="single.html">
-                        <img src="images/goodie3.jpg" class="img-responsive" alt=""/>
-                        <span class="new-box">
-						<span class="new-label">New</span>
-					</span>
-                        <span class="sale-box">
-						<span class="sale-label">Sale!</span>
-					</span>
-                        <div class="shop_desc">
-                            <h3><a href="#">aliquam volutp</a></h3>
-                            <p>Lorem ipsum consectetuer adipiscing </p>
-                            <span class="reducedfrom">$66.00</span>
-                            <span class="actual">$12.00</span><br>
-                            <ul class="buttons">
-                                <li class="cart"><a href="#">Add To Cart</a></li>
-                                <li class="shop_btn"><a href="#">Read More</a></li>
-                                <div class="clear"> </div>
-                            </ul>
-                        </div>
-                    </a></div>
-                <div class="col-md-3 shop_box"><a href="single.html">
-                        <img src="images/goodie4.jpg" class="img-responsive" alt=""/>
-                        <span class="new-box">
-						<span class="new-label">New</span>
-					</span>
-                        <div class="shop_desc">
-                            <h3><a href="#">aliquam volutp</a></h3>
-                            <p>Lorem ipsum consectetuer adipiscing </p>
-                            <span class="reducedfrom">$66.00</span>
-                            <span class="actual">$12.00</span><br>
-                            <ul class="buttons">
-                                <li class="cart"><a href="#">Add To Cart</a></li>
-                                <li class="shop_btn"><a href="#">Read More</a></li>
-                                <div class="clear"> </div>
-                            </ul>
-                        </div>
-                    </a></div>
-            </div>
+
+                @foreach($goodies as $good)
+
+                    <div class="col-md-3 shop_box"><a href="single.html">
+                            <img src="images/pic12.jpg" class="img-responsive" alt=""/>
+                            <span class="new-box">
+			                    <span class="new-label">New</span>
+		                    </span>
+                            <span class="sale-box">
+			                    <span class="sale-label">Sale!</span>
+		                    </span>
+                            <div class="shop_desc">
+                                <h3><a href="#">{{ $good ->nom }}</a></h3>
+                                <p>{{ $good ->description }} </p>
+                                <span class="reducedfrom">$66.00</span>
+                                <span class="actual">{{ $good ->prix }}</span><br>
+                                <ul class="buttons">
+                                    <li class="cart"><a href="#">Add To Cart</a></li>
+                                    <li class="shop_btn"><a href="#">Read More</a></li>
+                                    <div class="clear"> </div>
+                                </ul>
+                            </div>
+                        </a></div>
+
+                @endforeach
+
+
             <div class="row">
                 <div class="col-md-3 shop_box"><a href="single.html">
                         <img src="images/pic9.jpg" class="img-responsive" alt=""/>

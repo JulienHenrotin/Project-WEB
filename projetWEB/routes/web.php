@@ -21,9 +21,9 @@ Route::get('/event', function() {
     return view('event');
 });
 
-Route::get('/shop', function() {
-    return view('shop');
-});
+Route::get('/shop', 'shopController@affichage');
+Route::post('/shop', 'shopController@traitement');
+Route::get('/shop', 'shopController@affGoodies');
 
 Route::get('/ideabox', function() {
     return view('ideabox');

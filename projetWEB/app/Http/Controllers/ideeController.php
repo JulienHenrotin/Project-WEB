@@ -10,7 +10,7 @@ class ideeController extends Controller
     public function zonetxt()
     {
 
-    return view ('ideabox');
+        return view ('ideabox');
 
     }
 
@@ -37,7 +37,7 @@ return "ton idée a ete validé";
 
           'boite_a_idee' => $boite_a_idee,
 
-    ]);
+          ]);
 
     }
 
