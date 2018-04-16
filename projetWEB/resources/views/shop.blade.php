@@ -73,7 +73,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 @foreach($goodies as $good)
                     <!--<div class="row">-->
                     <div class="col-md-3 shop_box"><a href="single.html">
-                            <img src="images/pic12.jpg" class="img-responsive" alt=""/>
+                            <img src="images/{{ $good ->path_image }}.jpg" class="img-responsive" alt=""/>
 
                             <div class="shop_desc">
                                 <h3><a href="#">{{ $good ->nom }}</a></h3>
@@ -103,7 +103,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </html>
 
 
-<!--////////////////////////////////////////////////--
+<!--////////////////////////////////////////////////-->
+
 
 <body>
 <div class="container">

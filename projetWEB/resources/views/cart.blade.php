@@ -1,3 +1,18 @@
+<?php
+class panier{
+    public function __construct()
+    {
+        if(!isset($_SESSION)){
+            session_start();
+        }
+        if(!isset($_SESSION['panier'])){
+            $_SESSION['panier'] = array();
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -46,6 +61,7 @@
 <?php include ('menu.blade.html'); ?>
 
 <h1>test<br/></h1>
+<p>  <br/> </p>
 
 <?php include ('footer.blade.html'); ?>
 

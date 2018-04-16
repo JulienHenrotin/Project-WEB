@@ -73,6 +73,10 @@ Route::get('/ideabox','ideeController@ideeprec');
 
 Route::get('/cart', 'cartController@affichage');
 Route::post('/cart', 'cartController@traitement');
+Route::get('/add-to-cart/{id_items}', [
+    'uses' => 'cartController@getAddToCart',
+    'as' => 'goodies.addToCart',
+]);
 
 Route::get('/admin', 'adminController@formulaire');
 Route::post('/admin', 'adminController@reponse');
