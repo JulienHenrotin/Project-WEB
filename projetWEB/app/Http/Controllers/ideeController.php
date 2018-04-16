@@ -23,7 +23,7 @@ class ideeController extends Controller
 
     $idee -> save();
 
-return "ton idée a ete validé";
+return redirect ('ideabox');
 
     }
 

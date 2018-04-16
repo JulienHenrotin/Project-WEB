@@ -78,6 +78,8 @@
                                   @foreach($boite_a_idee as $BAI )
                                         <li>
 
+
+
                                           {{$BAI -> idee}}
                                           <input type="submit" name="votes" value="Voter pour l'idee">
                                           {{$BAI -> vote}}

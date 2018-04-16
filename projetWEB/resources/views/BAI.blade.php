@@ -18,9 +18,7 @@
 
 
                    <textarea type="text" name="textidee" placeholder= "Ton idée juste ici"></textarea>
-
-
-                    <input type="submit" value="Valider mon idée">
+                   <input type="submit" value="Valider mon idée">
 
                     </form>
 
@@ -33,32 +31,14 @@
 
                     @foreach($boite_a_idee as $BAI )
 
-                    <li>
-
-                    {{$BAI -> idee}}
-
-                    <input type="submit" name="votes" value="Voter pour l'idee">
-
-                    {{$BAI -> vote}}
-
-                    <?php
+                     <li>
 
 
-                      if ($BAI != NULL )
-
-                    {
-
-                      echo"0";
-
-                    }
+                         {{$BAI -> vote}}       //effiche les idées precedentes
 
 
-                     ?>
-                    likes
-
-
-                                </li>
-                                @endforeach
+                     </li>
+                   @endforeach
  </ul>
 
 
