@@ -25,6 +25,7 @@ Route::get('/shop', 'shopController@affichage');
 Route::post('/shop', 'shopController@traitement');
 Route::get('/shop', 'shopController@affGoodies');
 
+
 Route::get('/ideabox', function() {
     return view('ideabox');
 });
@@ -70,8 +71,8 @@ Route::get('/ideabox', 'ideeController@zonetxt' );
 Route::post('/ideabox','ideeController@validation');
 Route::get('/ideabox','ideeController@ideeprec');
 
-
-
+Route::get('/cart', 'cartController@affichage');
+Route::post('/cart', 'cartController@traitement');
 
 Route::get('/admin', 'adminController@formulaire');
 Route::post('/admin', 'adminController@reponse');

@@ -9,6 +9,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
     <title>Boutique</title>
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+    <meta name="_token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
     <link href="css/style.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -73,11 +78,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="shop_desc">
                                 <h3><a href="#">{{ $good ->nom }}</a></h3>
                                 <p>{{ $good ->description }} </p>
-                                <span class="reducedfrom">$66.00</span>
                                 <span class="actual">{{ $good ->prix }}€</span><br>
                                 <ul class="buttons">
-                                    <li class="cart"><a href="#">Add To Cart</a></li>
-                                    <li class="shop_btn"><a href="#">Read More</a></li>
+                                    <li class="cart"><a href="#">Ajouter au panier</a></li>
+                                    <li class="shop_btn"><a href="images/pic12.jpg">Zoom</a></li>
                                     <div class="clear"> </div>
 
                                 </ul>
@@ -95,5 +99,57 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <?php include ('footer.blade.html'); ?>
 
+</body>
+</html>
+
+
+<!--////////////////////////////////////////////////--
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Products info </h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <input type="text" class="form-controller" id="search" name="search"></input>
+                </div>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#search').on('keyup',function(){
+        $value=$(this).val();
+        $.ajax({
+            type : 'get',
+            url : '{{URL::to('search')}}',
+            data:{'search':$value},
+            success:function(data){
+                $('tbody').html(data);
+            }
+        });
+    })
+
+</script>
+<script type="text/javascript">
+    $.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });
+</script>
 </body>
 </html>
