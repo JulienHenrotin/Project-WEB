@@ -17,13 +17,11 @@ Route::get('/index', function () {
 });
 
 
-Route::get('/event', function() {
-    return view('event');
-});
-
 Route::get('/shop', 'shopController@affichage');
 Route::post('/shop', 'shopController@traitement');
 Route::get('/shop', 'shopController@affGoodies');
+
+Route::get('/event', 'eventController@affEvenements');
 
 
 Route::get('/ideabox', function() {
