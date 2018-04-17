@@ -52,50 +52,49 @@
 <?php include ('menu.blade.html'); ?>
 
 <div class="main">
-    <div class="shop_top">
-          <div class="container">
-                        <div class="row">
-                            <div class="col-md-5">
-
-                                <form method="post">
-
-                                    <div class="to">
-                                    {{ csrf_field() }}
-
-
-                                        <input type="text" name="textidee" placeholder= "Ton idée juste ici"></textarea>
-                                        <input type="submit" value="Valider mon idée">
-
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="col-md-5">
-
-                                <h1> Idees precedentes </h1>
-
-                                <ul>
-                                  @foreach($boite_a_idee as $BAI )
-                                        <li>
+ <div class="shop_top">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-5">
 
 
 
-                                          {{$BAI -> idee}}
-                                          <input type="submit" name="votes" value="Voter pour l'idee">
-                                          {{$BAI -> vote}}
+         <form method="post">
+           <div class="to">
+            {{ csrf_field() }}
+             <input type="text" name="textidee" placeholder= "Ton idée juste ici">
+               <input type="submit" value="Valider mon idée">
+            </div>
+         </form>
+
+         </div>
+
+                <div class="col-md-5">
+
+                <h1> Idees precedentes </h1>
+
+                <ul>
+
+                 @foreach($boite_a_idee as $BAI )
+
+                 <li>
+
+                  {{$BAI -> idee}}
 
 
+                 </li>
 
-                                        </li>
+                 @endforeach
 
-                                    @endforeach
-                                </ul>
+                </ul>
 
-                            </div>
-                        </div>
+             </div>
+           </div>
         </div>
     </div>
 </div>
 
 
 <?php include ('footer.blade.html'); ?>
+
+

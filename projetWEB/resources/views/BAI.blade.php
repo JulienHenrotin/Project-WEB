@@ -34,7 +34,7 @@
                      <li>
 
 
-                         {{$BAI -> vote}}       //effiche les idées precedentes
+                         {{$BAI -> vote}}
 
 
                      </li>

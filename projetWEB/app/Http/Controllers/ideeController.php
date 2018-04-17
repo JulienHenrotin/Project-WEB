@@ -29,11 +29,11 @@ return redirect ('ideabox');
 
     {
           $boite_a_idee = \App\boite_a_idee::all();
-            //dd(dump($boite_a_idee));
 
           return view ('ideabox',[
 
           'boite_a_idee' => $boite_a_idee,
+
 
           ]);
 

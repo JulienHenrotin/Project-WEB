@@ -76,6 +76,10 @@ Route::get('/add-to-cart/{id_items}', [
     'as' => 'goodies.addToCart',
 ]);
 
+Route::get('/event','eventController@affEvenements');
+
+
+
 Route::get('/admin', 'adminController@formulaire');
 Route::post('/admin', 'adminController@reponse');
 Route::get('/eventAdminPasse', 'eventPasseAdminControler@affichage');
