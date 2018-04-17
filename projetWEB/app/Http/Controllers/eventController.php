@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\utilisateurs;
-use App\s_inscrit;
+use App\inscrit;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
@@ -28,7 +28,8 @@ class eventController extends Controller
         //dd(dump($user));
         $inscrit = new  \App\inscrit;
         $inscrit->id_event = $event;
-        $inscrit->id_User = $inscrit;
+        $inscrit->id_User = $user;
         $inscrit->save();
+        return view('/event');
     }
 }
