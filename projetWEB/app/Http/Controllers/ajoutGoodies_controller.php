@@ -21,6 +21,7 @@ class ajoutGoodies_controller extends Controller
             'nom' => ['required'],
             'prix' => ['required'],
             'description' => ['required'],
+            'path_image' => ['required'],
         ]);
         //placement dans la base de donnée
         $goodies = new \App\goodies();
@@ -28,6 +29,7 @@ class ajoutGoodies_controller extends Controller
         $goodies->prix = request('prix');
         $goodies->description = request('description');
         $goodies->id_categorie = request('categorie');
+        $goodies->path_image = request('path_image');
         $goodies->save();
 
 
