@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\support\facades\Session;
+use App\propose;
 
 class ideeController extends Controller
 {
@@ -20,6 +22,19 @@ class ideeController extends Controller
     $idee -> idee= request('textidee');
 
     $idee -> save();
+
+    $iduser = Session::get('utilisateur.id_User');
+
+    $ididee = \App\boite_a_idee::orderBy('id_idee','DESC')->get()[0];
+
+
+    dd(dump($iduser));
+
+    $proposeObject = new \App\propose;
+    $proposeObject->id_User = $iduser;
+    $proposeObject->id_idee = $ididee;
+    $proposeObject->save();
+
 
 return redirect ('ideabox');
 

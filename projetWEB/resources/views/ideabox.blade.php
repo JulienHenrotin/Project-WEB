@@ -49,6 +49,7 @@
 </head>
 <body>
 
+
 <?php include ('menu.blade.html'); ?>
 
 <div class="main">
@@ -69,6 +70,10 @@
 
          </div>
 
+
+
+
+
                 <div class="col-md-5">
 
                 <h1> Idees precedentes </h1>
@@ -81,13 +86,11 @@
 
                   {{$BAI -> idee}}
 
-
                  </li>
 
                  @endforeach
 
                 </ul>
-
              </div>
            </div>
         </div>
