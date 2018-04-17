@@ -12,36 +12,21 @@ class connexionControler extends Controller
     {
         return view ('login');
     }
-//===========================================================
-    public function traitement2 ()
-    {
-
-    }
- //==============================================================
 
     public function traitement()
     {
 
-         /*request()->validate([
-            'mail'=>['required','email' ],
-            'password'=>['required'],
-        ]);*/
-
-        /*$resultat = auth()->attempt([
-            'mail'=>request('mail'),
-            'password'=>request('password'),
-        ]);*/
         $mailentre = request('mail');
         $MDPentre = request('password');
-        //$MDPbase = DB::select("SELECT mdp FROM utilisateurs WHERE mail=$mailentre");
         $MDPbase = utilisateurs::select('MDP')->where('mail', $mailentre)->get();
-
 
         if ($MDPentre == $MDPbase)
         {
-            $prenom =DB::select('SELECT prenom FROM utilisateurs WHERE mail=? ',[$mailentre]);
-            $id_user = DB::select('SELECT prenom FROM utilisateurs WHERE mail=? ',[$mailentre]);
-            $id_statut = DB::select('SELECT id_statut FROM utilisateurs WHERE mail=? ',[$mailentre]);
+            dd(var_dump($MDPbase));
+            $prenom =utilisateurs::select('prenom')->where('mail',$mailentre);
+            $id_user = utilisateurs::select('id_user')->where('mail',$mailentre);
+            $id_statut = utilisateurs::select('id_statut')->where('mail',$mailentre);
+            //on stocke dans la sessions les infos de l'utilisateur
             session::put('utilisateur.prenom', $prenom );
             session::put('utilisateur.id_User', $id_user );
             session::put('utilisateur.id_statut', $id_statut );
@@ -51,7 +36,7 @@ class connexionControler extends Controller
         {
         {
             return back()->withInput()->withErrors([
-                'email'=>'Vos identifiants sont pas juste'
+                'email'=>'Vos identifiants ne sont pas justes'
             ]);
         }
     }

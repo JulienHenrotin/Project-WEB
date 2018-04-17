@@ -88,6 +88,8 @@ Route::get('/eventAdminPasse', 'eventPasseAdminControler@affichage');
 Route::get('/ajoutGoodies','ajoutGoodies_controller@formulaire');
 Route::post('/ajoutGoodies','ajoutGoodies_controller@traitement');
 
-Route::get('/inscription' , function (){
-    return view ('inscription');
-});
+Route::get('/ajouterEvent', 'ajoutEventController@formulaire');
+Route::post('/ajouterEvent', 'ajoutEventController@traitement');
+
+
+
