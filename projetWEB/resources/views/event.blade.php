@@ -74,7 +74,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="img_section_txt">
                                 {{$event->descrip_event}}
                             </div>
+
                         </a></div>
+                    <form method="post">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="event" value={{$event->id_event}}>
+                        <button  class="btn" type="submit">S'inscrire</button>
+                    </form>
                 </div>
                  @endforeach
             </div>

@@ -65,7 +65,7 @@ Route::post('/register', 'inscriptionControleur@traitement');
 Route::get('/login','connexionControler@formulaire');
 Route::post('/login','connexionControler@traitement');
 
-Route::get('/ideabox', 'ideeController@zonetxt' );
+Route::get('    /ideabox', 'ideeController@zonetxt' );
 Route::post('/ideabox','ideeController@validation');
 Route::get('/ideabox','ideeController@ideeprec');
 
@@ -77,7 +77,7 @@ Route::get('/add-to-cart/{id_items}', [
 ]);
 
 Route::get('/event','eventController@affEvenements');
-
+Route::post('/event', 'eventController@traitement');
 
 
 Route::get('/admin', 'adminController@formulaire');

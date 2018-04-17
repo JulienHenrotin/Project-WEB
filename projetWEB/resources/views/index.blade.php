@@ -56,9 +56,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 
 
-<?php include ('menu.blade.html'); ?>
+<?php include ('menu.blade.html');?>
 
-
+{{--<!-- <pre>{{dump(Session::get('utilisateurs.prenom')}}</pre> -->--}}
 <div class="banner">
     <!-- start slider -->
     <div id="fwslider">
@@ -178,7 +178,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <h2>Intégration 2k17</h2>
                             <p>Toute première après midi associative pour nous petits nouveaux.</p>
                         </div>
-                    </a> </div
+                    </a> </div>
             </div>
             <h4 class="m_4"><a href="#">Des évènnements ludiques</a></h4>
             <p class="m_5">Intégration et découverte de Nancy</p>

@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <div class="header">
     <div class="container">
         <div class="row">
@@ -8,12 +9,18 @@
                     </div>
                     <div class="menu">
                         <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
-                        <ul class="nav" id="nav">
+                        <label class="nav" id="nav"></label>
                             <li><a href="shop">Boutique</a></li>
                             <li><a href="event">Evenements</a></li>
                             <li><a href="ideabox">Boite à idées</a></li>
                             <li><a href="admin">Admin</a></li>
-                            <li><a href="contact">Contact</a></li>
+                        <li><a href="contact">Contact</a></li> </br>
+
+                                <?php
+                                $nom =Session::get('utilisateur.prenom');
+                                echo "<font color='white'> Bienvenue ".$nom." sur le site du BDE de l'EXIA</font>";
+                                ?>
+
                             <div class="clear"></div>
                         </ul>
                         <script type="text/javascript" src="js/responsive-nav.js"></script>
@@ -56,3 +63,5 @@
         </div>
     </div>
 </div>
+
+</html>
