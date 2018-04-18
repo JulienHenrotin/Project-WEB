@@ -32,8 +32,8 @@ class shopController extends Controller
         $commamndeUSER = commandes::where('id_User', $user)->get();
 
         $recherche = commandes::where('id_User',$user)->where('id_items',$items)->get()[0];
-        dd(dump($recherche));
-        if(count($recherche)>0)
+        //dd(dump($recherche));
+        if($recherche->isNotEmpty())
         {
             $plusun = $recherche->quantite + 1;
             //dd(dump($plusun));
@@ -48,9 +48,11 @@ class shopController extends Controller
             $cart->quantite = 1;
             $cart->save();
             //dd(dump($items, $user, $cart));
-            return view('shop');
+            return redirect('shop');
         }
     }
+
+
 
 
 

@@ -1,3 +1,56 @@
+<?php
+$erreur = false;
+$action = (isset($_POST['action'])? $_POST['action']:  (isset($_GET['action'])? $_GET['action']:null )) ;
+if($action !== null)
+{
+if(!in_array($action,array('ajout', 'suppression', 'refresh')))
+$erreur=true;
+
+//récuperation des variables en POST ou GET
+$l = (isset($_POST['l'])? $_POST['l']:  (isset($_GET['l'])? $_GET['l']:null )) ;
+$p = (isset($_POST['p'])? $_POST['p']:  (isset($_GET['p'])? $_GET['p']:null )) ;
+$q = (isset($_POST['q'])? $_POST['q']:  (isset($_GET['q'])? $_GET['q']:null )) ;
+//Suppression des espaces verticaux
+$l = preg_replace('#\v#', '',$l);
+//On verifie que $p soit un float
+$p = floatval($p);
+
+//On traite $q qui peut etre un entier simple ou un tableau d'entier
+if (is_array($q)){
+$QteArticle = array();
+$i=0;
+foreach ($q as $contenu){
+$QteArticle[$i++] = intval($contenu);
+}
+}
+else
+$q = intval($q);
+}
+if (!$erreur){
+switch($action){
+Case "ajout":
+ajouterArticle($l,$q,$p);
+break;
+Case "suppression":
+supprimerArticle($l);
+break;
+Case "refresh" :
+for ($i = 0 ; $i < count($QteArticle) ; $i++)
+{
+modifierQTeArticle($_SESSION['panier']['libelleProduit'][$i],round($QteArticle[$i]));
+}
+break;
+Default:
+break;
+}
+}
+
+?>
+
+
+
+
+
 
 <!DOCTYPE HTML>
 <html>
@@ -67,7 +120,7 @@
 
                 @foreach($goodies as $good)
                     <!--<div class="row">-->
-                    <div class="col-md-3 shop_box"><a href="single.html">
+                    <div class="col-md-3 shop_box"><a href="">
                             <img src="images/{{ $good ->path_image }}.jpg" class="img-responsive" alt=""/>
 
                             <div class="shop_desc">
@@ -77,8 +130,9 @@
                                 <ul class="buttons">
                                     <form method="post">
                                         {{ csrf_field() }}
-                                        <input class="cart" type="submit" name="achat" value="{{$good->id_items}}">Ajouter au panier</input>
-                                        <li class="shop_btn"><a href="images/pic12.jpg">Zoom</a></li>
+                                        <li class="cart" href="cart.php?action=ajout&amp;l={{ $good ->nom }}&amp;q=1&amp;p={{ $good ->prix }}" onclick="window.open(this.href, '',
+'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;" type="submit" name="achat" value="{{$good->id_items}}">Ajouter au panier</li>
+                                        <li class="shop_btn"><a href="images/{{ $good ->path_image }}.jpg">Zoom</a></li>
                                         <div class="clear"> </div>
                                     </form>
 

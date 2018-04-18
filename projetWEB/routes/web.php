@@ -20,6 +20,11 @@ Route::get('/index', function () {
 //Route::get('/shop', 'shopController@affichage');
 Route::post('/shop', 'shopController@traitement');
 Route::get('/shop', 'shopController@affGoodies');
+Route::post('/cart', 'cartController@supprimerArticle');
+Route::post('/cart', 'cartController@modifierQTeArticle');
+Route::post('/cart', 'cartController@ajouterArticle');
+Route::get('/cart', 'cartController@MontantGlobal');
+Route::get('/cart', 'cartController@creationPanier');
 
 
 
