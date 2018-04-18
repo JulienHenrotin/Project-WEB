@@ -4,14 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use DB;
+
+use Illuminate\Support\Facades\Session;
+use App\commandes;
+use App\goodies;
+use Illuminate\Support\Facades\DB;
 
 
 
 class shopController extends Controller
 {
 
-    function affichage(){
+    function affichage()
+    {
 
         return view('shop', [
 
@@ -20,38 +25,63 @@ class shopController extends Controller
 
     }
 
-    function traitement(){
-        return view('shop');
+    function traitement()
+    {
+        $items = request('achat');
+        $user = Session::get('utilisateur.id_User');
+        $commamndeUSER = commande::where('id_User', $user)->get();
+
+        $recherche = commande::where('id_User',$user)->where('id_items',$items)->get()[0];
+       // dd(dump($recherche));
+        if(count($recherche)>0)
+        {
+            $plusun = $recherche->quantite + 1;
+            //dd(dump($plusun));
+            //commande::find($user && $items)->update(['quantite' => $plusun]);
+            DB::update('update commande  set quantite = ? where id_items=? and id_User=?',[$plusun,$items,$user]);
+        }
+        else {
+            $cart = new  \App\commandes;
+            $cart->id_user = $user;
+            $cart->id_items = $items;
+            $cart->quantite = 1;
+            $cart->save();
+            //dd(dump($items, $user, $cart));
+            return view('shop');
+        }
     }
 
 
-    function affGoodies(){
+
+    function affGoodies()
+    {
         $goodies = \App\goodies::all();
 
         return view('shop', [
-           'goodies' => $goodies,
+            'goodies' => $goodies,
         ]);
     }
-
-    public function search(Request $request)
-    {
-        if($request->ajax())
-        {
-            $output="";
-            $goodies=DB::table('goodies')->where('title','LIKE','%'.$request->search."%")->get();
-            if($goodies)
-            {
-                foreach ($goodies as $key => $item) {
-                    $output.='<tr>'.
-                        '<td>'.$item->id_item.'</td>'.
-                        '<td>'.$item->nom.'</td>'.
-                        '<td>'.$item->description.'</td>'.
-                        '<td>'.$item->prix.'</td>'.
-                        '</tr>';
-                }
-                return Response($output);
-            }
-        }
-    }
 }
+
+//    public function search(Request $request)
+//    {
+//        if($request->ajax())
+//        {
+//            $output="";
+//            $goodies=DB::table('goodies')->where('title','LIKE','%'.$request->search."%")->get();
+//            if($goodies)
+//            {
+//                foreach ($goodies as $key => $item) {
+//                    $output.='<tr>'.
+//                        '<td>'.$item->id_item.'</td>'.
+//                        '<td>'.$item->nom.'</td>'.
+//                        '<td>'.$item->description.'</td>'.
+//                        '<td>'.$item->prix.'</td>'.
+//                        '</tr>';
+//                }
+//                return Response($output);
+//            }
+//        }
+//    }
+//}
 

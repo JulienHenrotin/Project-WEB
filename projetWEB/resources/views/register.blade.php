@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <script src="js/register.js"></script>
+   <!-- <script src="js/register.js"></script>-->
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript">
@@ -49,23 +49,23 @@
 <div class="main">
     <div class="shop_top">
         <div class="container">
-            <form method="post" onblur="return verifForm(this)">
+            <form method="post" >
                 {{ csrf_field() }}
                 <div class="register-top-grid">
                     <h3>INFORMATIONS PERSONNELLES</h3>
                     <div>
                         <span>Prénom<label>*</label></span>
-                        <input type="text" name="prenom" placeholder="Prénom" id="prenom" onblur="verifprenom(this)">
+                        <input type="text" name="prenom" placeholder="Prénom" id="prenom" >
                         <span id="aideprenom"></span> </br>
                     </div>
                     <div>
                         <span>Nom<label>*</label></span>
-                        <input type="text" name="nom" placeholder="Nom" id="nom" onblur="verifnom(this)">
+                        <input type="text" name="nom" placeholder="Nom" id="nom" >
                         <span id="aidenom"></span> </br>
                     </div>
                     <div>
                         <span>Adresse email<label>*</label></span>
-                        <input type="text" name="mail" placeholder="Mail" onblur="verifmail(this)">
+                        <input type="text" name="mail" placeholder="Mail" >
                         <span id="aidmail"></span> </br>
                     </div>
                     <div class="clear"> </div>
@@ -76,12 +76,12 @@
                     <h3>INFORMATION DE CONNEXION</h3>
                     <div>
                         <span>Mot de passe<label>*</label></span>
-                        <input type="password" name="password" placeholder="Mot de Passe" id="password" onblur="verifMDP(this)">
+                        <input type="password" name="password" placeholder="Mot de Passe" id="password" >
                         <span id="aidepassword"></span> </br>
                     </div>
                     <div>
                         <span>Confirmation du mot de passe<label>*</label></span>
-                        <input type="password" name="verif" placeholder="Confirmation Mot de Passe" id="verif" onblur="MDPegal(this)">
+                        <input type="password" name="verif" placeholder="Confirmation Mot de Passe" id="verif" >
                         <span id="aideverif"></span> </br>
                     </div>
                     <div class="clear"> </div>

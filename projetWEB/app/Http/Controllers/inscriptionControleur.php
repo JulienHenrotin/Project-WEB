@@ -13,13 +13,13 @@ class inscriptionControleur extends Controller
 
     public function traitement()
     {
-        request()->validate([
+        /*request()->validate([
             'prenom' =>['required'],
             'nom' =>['required'],
             'mail'=>['email','required'],
             'password'=>['required','confirmed'],
             'password_confirmation'=>['required'],
-        ]);
+        ]);*/
         //placement dans la base de donnée
         $utilisateurs = new \App\utilisateurs();
         $utilisateurs->prenom = request('prenom');

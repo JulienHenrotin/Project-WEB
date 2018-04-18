@@ -75,9 +75,13 @@
                                 <p>{{ $good ->description }} </p>
                                 <span class="actual">{{ $good ->prix }}€</span><br>
                                 <ul class="buttons">
-                                    <li class="cart"><a href="#">Ajouter au panier</a></li>
-                                    <li class="shop_btn"><a href="images/pic12.jpg">Zoom</a></li>
-                                    <div class="clear"> </div>
+                                    <form method="post">
+                                        {{ csrf_field() }}
+                                        <input class="cart" type="submit" name="achat" value="{{$good->id_items}}">Ajouter au panier</input>
+                                        <li class="shop_btn"><a href="images/pic12.jpg">Zoom</a></li>
+                                        <div class="clear"> </div>
+                                    </form>
+
 
                                 </ul>
                             </div>

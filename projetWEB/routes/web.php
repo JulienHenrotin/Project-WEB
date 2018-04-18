@@ -17,11 +17,11 @@ Route::get('/index', function () {
 });
 
 
-Route::get('/shop', 'shopController@affichage');
+//Route::get('/shop', 'shopController@affichage');
 Route::post('/shop', 'shopController@traitement');
 Route::get('/shop', 'shopController@affGoodies');
 
-Route::get('/event', 'eventController@affEvenements');
+
 
 
 Route::get('/ideabox', function() {
@@ -76,7 +76,9 @@ Route::get('/add-to-cart/{id_items}', [
     'as' => 'goodies.addToCart',
 ]);
 
-Route::get('/event','eventController@affEvenements');
+Route::get('/event',[
+    'uses' =>'eventController@affEvenements',
+    'as' => 'event']);
 Route::post('/event', 'eventController@traitement');
 
 

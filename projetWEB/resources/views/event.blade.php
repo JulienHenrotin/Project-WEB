@@ -1,9 +1,4 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -65,7 +60,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="row ex_box">
                 <h3 class="m_2">Nos évènements</h3>
-
+                <?php
+                //dd(dump($evenements));
+                ?>
                 @foreach($evenements as $event)
 
                 <div class="col-md-4 team1">
@@ -79,7 +76,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <form method="post">
                         {{ csrf_field() }}
                         <input type="hidden" name="event" value={{$event->id_event}}>
-                        <button  class="btn" type="submit">S'inscrire</button>
+                        <button  class="btn" href="{{route('event')}}" type="submit">S'inscrire</button>
                     </form>
                 </div>
                  @endforeach
