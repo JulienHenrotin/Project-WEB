@@ -86,6 +86,16 @@
 
                   {{$BAI -> idee}}
 
+                  <form method="post" action="ideabox/vote">
+
+                       {{ csrf_field() }}
+
+                       <input type="hidden" name="like" value={{$BAI->id_idee}}>
+
+                       <button  class="btn" href="http://localhost/Projet/projetWEB/public/ideabox" type="submit"> like </button>
+
+                  </form>
+
                  </li>
 
                  @endforeach

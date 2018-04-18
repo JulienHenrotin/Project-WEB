@@ -49,4 +49,25 @@ return redirect ('ideabox');
           'boite_a_idee' => $boite_a_idee,
           ]);
     }
+
+  function like()
+    {
+
+        $like=request('like');
+        $user=Session::all();
+        $user =Session::get('utilisateur.id_User');
+
+        $vote = new \App\votepour;
+        $vote->id_idee = $like;
+        $vote->id_User = $user;
+
+
+
+        $vote->save();
+
+
+        return redirect ('ideabox');
+    }
+
+
 }

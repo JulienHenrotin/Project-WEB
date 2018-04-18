@@ -65,9 +65,10 @@ Route::post('/register', 'inscriptionControleur@traitement');
 Route::get('/login','connexionControler@formulaire');
 Route::post('/login','connexionControler@traitement');
 
-Route::get('    /ideabox', 'ideeController@zonetxt' );
+Route::get('/ideabox', 'ideeController@zonetxt' );
 Route::post('/ideabox','ideeController@validation');
 Route::get('/ideabox','ideeController@ideeprec');
+Route::post('ideabox/vote','ideeController@like');
 
 Route::get('/cart', 'cartController@affichage');
 Route::post('/cart', 'cartController@traitement');

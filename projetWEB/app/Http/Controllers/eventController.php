@@ -26,7 +26,6 @@ class eventController extends Controller
         $event=request('event');
         //$user=Session::all();
         $user =Session::get('utilisateur.id_User');
-        //dd(dump($user));
         $inscrit = new  \App\inscrit;
         $inscrit->id_event = $event;
         $inscrit->id_User = $user;
