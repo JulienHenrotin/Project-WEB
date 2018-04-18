@@ -29,16 +29,17 @@ class shopController extends Controller
     {
         $items = request('achat');
         $user = Session::get('utilisateur.id_User');
-        $commamndeUSER = commande::where('id_User', $user)->get();
+        $commamndeUSER = commandes::where('id_User', $user)->get();
 
-        $recherche = commande::where('id_User',$user)->where('id_items',$items)->get()[0];
-       // dd(dump($recherche));
+        $recherche = commandes::where('id_User',$user)->where('id_items',$items)->get()[0];
+        dd(dump($recherche));
         if(count($recherche)>0)
         {
             $plusun = $recherche->quantite + 1;
             //dd(dump($plusun));
             //commande::find($user && $items)->update(['quantite' => $plusun]);
-            DB::update('update commande  set quantite = ? where id_items=? and id_User=?',[$plusun,$items,$user]);
+            //DB::update('update commande  set quantite = ? where id_items=? and id_User=?',[$plusun,$items,$user]);
+            commandes::where('id_items', '=', $items -> where('id_User', '=', $user)->update(['quantite' => $plusun]));
         }
         else {
             $cart = new  \App\commandes;
